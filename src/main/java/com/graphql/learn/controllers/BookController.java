@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
+@CrossOrigin("*")
 public class BookController {
 
     @Autowired
@@ -47,6 +48,8 @@ public class BookController {
     public Book get(@Argument int bookId) {
         return this.bookService.get(bookId);
     }
+
+
 
 }
 
